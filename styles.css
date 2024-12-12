@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121063; /* Dark indigo background */
+    color: #ffffff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+#app {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Spacing between elements */
+}
+
+/* Card Styles */
+#card {
+    background-color: #1a1a73; /* Dark blue-gray background */
+    border: none; /* No border for cleaner look */
+    border-radius: 15px; /* Rounded edges */
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px; /* Larger text */
+    font-weight: bold;
+    color: #e1e1ff; /* Soft, light text */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6); /* Soft shadow */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #292983; /* Lighter hover color */
+}
+
+/* Header (title) */
+h1 {
+    font-size: 28px; /* Bold and larger */
+    color: #b3b3ff; /* Subtle light indigo */
+    margin: 0;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    gap: 10px; /* Space between buttons */
+    width: 100%;
+    align-items: center; /* Center align buttons */
+}
+
+/* Flip Button */
+#flip {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3d3db3; /* Indigo button color */
+    color: #ffffff; /* White text */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; 
+}
+
+#flip:hover {
+    background-color: #5151e0; /* Brighter indigo on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Previous and Next Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    width: 100%;
+}
+
+button#prev,
+button#next {
+    flex: 1; /* Equal spacing */
+    padding: 12px;
+    font-size: 20px; /* Larger arrow size */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3d3db3; /* Indigo button color */
+    color: #ffffff; /* White text */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button#prev:hover,
+button#next:hover {
+    background-color: #5151e0; /* Brighter indigo on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+button:disabled {
+    background-color: #2b2b5b; /* Muted grayish blue */
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #card {
+        height: 150px;
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
