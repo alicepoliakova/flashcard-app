@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lëtzebuergesch Flashcards</title>
+    <title>🇱🇺 Lëtzebuergesch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Drawer Menu -->
+    <div id="drawer-menu">
+        <button id="menu-toggle">☰ Topics</button>
+        <ul id="menu-list">
+            <!-- Topics will be dynamically populated -->
+        </ul>
+    </div>
+
+    <!-- Main Application -->
     <div id="app">
-        <h1>Lëtzebuergesch</h1>
+        <div id="language-menu">
+            <button id="language-toggle">
+                <span>🌐 English</span>
+            </button>
+            <ul id="language-options">
+                <li data-lang="en">🇬🇧 English</li>
+                <li data-lang="fr">🇫🇷 French</li>
+                <li data-lang="de">🇩🇪 German</li>
+                <li data-lang="ru">🇷🇺 Russian</li>
+                <li data-lang="uk">🇺🇦 Ukrainian</li>
+                <li data-lang="es">🇪🇸 Spanish</li>
+                <li data-lang="pt">🇵🇹 Portuguese</li>
+                <li data-lang="it">🇮🇹 Italian</li>
+            </ul>
+        </div>
+
+        <h1>🇱🇺 Lëtzebuergesch</h1>
         <div id="card">
             <p id="content"></p>
         </div>
         <div class="controls">
-            <button id="flip">Flip</button> <!-- Flip button on top -->
+            <button id="flip">Flip</button>
             <div class="nav-buttons">
-                <button id="prev">&lt;</button> <!-- Previous -->
-                <button id="next">&gt;</button> <!-- Next -->
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
             </div>
+            <div id="progress">Card 1 / 43</div>
         </div>
     </div>
+
+
     <script src="main.js"></script>
 </body>
+
 </html>

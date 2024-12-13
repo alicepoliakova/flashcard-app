@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
     margin: 0;
     padding: 0;
-    background-color: #121063; /* Dark indigo background */
+    background: radial-gradient(circle, #0f0f3d, #000); /* Dark gradient */
     color: #ffffff; /* White text */
     display: flex;
     justify-content: center;
@@ -12,121 +12,170 @@ body {
     overflow: hidden;
 }
 
-#app {
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Spacing between elements */
-}
-
 /* Card Styles */
 #card {
-    background-color: #1a1a73; /* Dark blue-gray background */
-    border: none; /* No border for cleaner look */
-    border-radius: 15px; /* Rounded edges */
+    background: linear-gradient(145deg, #1f1f6b, #3d3d99); /* Gradient background */
+    border-radius: 15px;
     width: 100%;
-    height: 200px;
+    max-width: 420px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px; /* Larger text */
+    font-size: 28px;
     font-weight: bold;
-    color: #e1e1ff; /* Soft, light text */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6); /* Soft shadow */
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    color: #ffffff; /* White text (non-neon) */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 1px 10px #ffffff33;
+    transition: transform 0.5s ease, background 0.5s ease;
 }
 
 #card:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    background-color: #292983; /* Lighter hover color */
+    transform: scale(1.05) rotateX(10deg); /* Slight tilt on hover */
+    background: linear-gradient(145deg, #292983, #5c5cb3); /* Glow effect */
 }
 
 /* Header (title) */
 h1 {
-    font-size: 28px; /* Bold and larger */
-    color: #b3b3ff; /* Subtle light indigo */
-    margin: 0;
+    font-size: 32px;
+    color: #ffffff; /* White text */
+    margin: 0 0 20px; /* Add space below the title */
+    text-align: center; /* Center align the text */
 }
 
 /* Controls Section */
 .controls {
     display: flex;
-    flex-direction: column; /* Arrange buttons vertically */
-    gap: 10px; /* Space between buttons */
-    width: 100%;
-    align-items: center; /* Center align buttons */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
 }
 
 /* Flip Button */
 #flip {
-    padding: 12px;
-    font-size: 16px;
+    width: 420px;
+    height: 50px;
+    padding: 14px;
+    font-size: 18px;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
+    align-items: center;
     cursor: pointer;
-    background-color: #3d3db3; /* Indigo button color */
+    margin-top: 20px; /* Add margin between card and Flip button */
+    background: linear-gradient(145deg, #292983, #3d3db3);
     color: #ffffff; /* White text */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 1px 10px #ffffff33;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 #flip:hover {
-    background-color: #5151e0; /* Brighter indigo on hover */
-    transform: translateY(-3px); /* Subtle lift effect */
+    transform: scale(1.05) rotateX(10deg); /* Slight tilt on hover */
+    background: linear-gradient(145deg, #292983, #5c5cb3); /* Glow effect */
 }
 
-/* Previous and Next Buttons */
+/* Navigation Buttons */
 .nav-buttons {
     display: flex;
-    gap: 10px; /* Space between buttons */
-    justify-content: center;
-    width: 100%;
+    gap: 15px; /* Space between buttons */
 }
 
 button#prev,
 button#next {
-    flex: 1; /* Equal spacing */
-    padding: 12px;
-    font-size: 20px; /* Larger arrow size */
+    width: 205px;
+    height: 50px;
+    font-size: 24px;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
-    background-color: #3d3db3; /* Indigo button color */
+    align-items: center;
+    background: linear-gradient(145deg, #292983, #3d3db3);
     color: #ffffff; /* White text */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 1px 10px #ffffff33;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 button#prev:hover,
 button#next:hover {
-    background-color: #5151e0; /* Brighter indigo on hover */
-    transform: translateY(-3px); /* Subtle lift effect */
+    transform: scale(1.05) rotateX(10deg); /* Slight tilt on hover */
+    background: linear-gradient(145deg, #292983, #5c5cb3); /* Glow effect */
 }
 
-button:disabled {
-    background-color: #2b2b5b; /* Muted grayish blue */
-    cursor: not-allowed;
+/* Progress Indicator */
+#progress {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff; /* White text */
+}
+/* Language Menu Container */
+#language-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #card {
-        height: 150px;
-        font-size: 24px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
+/* Language Toggle Button */
+#language-toggle {
+    background: #1f1f6b;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 1px 10px #ffffff33;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+    width: 180px;
 }
+
+#language-toggle:hover {
+    background: #292983;
+}
+
+/* Dropdown Options */
+#language-options {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: linear-gradient(145deg, #292983, #3d3db3); /* Same gradient as nav buttons */
+    color: #ffffff; /* White text */
+    border: none; /* No border for a cleaner look */
+    border-radius: 15px; /* Rounded corners like buttons */
+    list-style: none;
+    padding: 10px 0;
+    display: none; /* Hidden by default */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 1px 10px #ffffff33;
+    transition: transform 0.2s ease, background 0.3s ease;
+    width: 180px;
+
+}
+
+/* Dropdown Items */
+#language-options li {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold; /* Consistent with buttons */
+    border-radius: 5px; /* Slight rounding for each item */
+    cursor: pointer;
+    background: transparent; /* Default is transparent */
+    transition: background 0.2s ease, transform 0.2s ease;
+    color: #ffffff; /* White text */
+}
+
+/* Hover Effects */
+#language-options li:hover {
+    transform: scale(1.05) rotateX(10deg); /* Slight tilt on hover */
+    background: linear-gradient(145deg, #292983, #5c5cb3); /* Glow effect */
+}
+
+
+/* Active Dropdown */
+#language-menu.active #language-options {
+    display: block; /* Show when menu is active */
+}
+

@@ -1,92 +1,341 @@
-// Updated Flashcard Data
+// Flashcard Data with Translations, including Luxembourgish (lb)
 const flashcards = [
-    { word: "Открытый", translation: "op" },
-    { word: "Закрытый", translation: "zou" },
-    { word: "Громкий", translation: "haart" },
-    { word: "Тихий", translation: "lues" },
-    { word: "Светлый", translation: "hell" },
-    { word: "Тёмный", translation: "donkel" },
-    { word: "Лёгкий", translation: "liicht" },
-    { word: "Трудный", translation: "komplizéiert" },
-    { word: "Новый", translation: "nei" },
-    { word: "Старый", translation: "al" },
-    { word: "Тяжёлый", translation: "schwéier" },
-    { word: "быстрый", translation: "séier; schnell" },
-    { word: "Медленный", translation: "lues" },
-    { word: "Полный", translation: "voll" },
-    { word: "Пустой", translation: "eidel" },
-    { word: "Длинный", translation: "laang" },
-    { word: "Короткий", translation: "kuerz" },
-    { word: "Высокий", translation: "héisch; grouss" },
-    { word: "Низкий", translation: "niddereg; kleng" },
-    { word: "Широкий", translation: "breet" },
-    { word: "Узкий", translation: "schmuel" },
-    { word: "Плохой", translation: "schlecht" },
-    { word: "Хороший", translation: "gutt" },
-    { word: "Горячий", translation: "waarm" },
-    { word: "Холодный", translation: "kal" },
-    { word: "Мягкий", translation: "mëll" },
-    { word: "Твёрдый", translation: "fest; haart" },
-    { word: "Мокрый", translation: "naass" },
-    { word: "Сухой", translation: "dréchen" },
-    { word: "Чистый", translation: "propper" },
-    { word: "Грязный", translation: "knaschteg" },
-    { word: "Дорогой", translation: "deier" },
-    { word: "Дешевый", translation: "bëlleg" },
-    { word: "Острый", translation: "schaarf" },
-    { word: "Тупой", translation: "stompeg" },
-    { word: "Блестящий", translation: "blenkeg" },
-    { word: "Тусклый", translation: "dimm" },
-    { word: "Глубокий", translation: "déif" },
-    { word: "Мелкий", translation: "kleng" },
-    { word: "Фантастический", translation: "fantastesch" },
-    { word: "Простой", translation: "einfach" },
-    { word: "Милый", translation: "léif" },
-    { word: "Уродливый", translation: "ellen" }
+    {
+        translations: {
+            en: "Open",
+            fr: "Ouvert",
+            de: "Offen",
+            ru: "Открытый",
+            uk: "Відкритий",
+            es: "Abierto",
+            pt: "Aberto",
+            it: "Aperto",
+            lb: "Op"
+        }
+    },
+    {
+        translations: {
+            en: "Closed",
+            fr: "Fermé",
+            de: "Geschlossen",
+            ru: "Закрытый",
+            uk: "Закритий",
+            es: "Cerrado",
+            pt: "Fechado",
+            it: "Chiuso",
+            lb: "Zou"
+        }
+    },
+    {
+        translations: {
+            en: "Loud",
+            fr: "Fort",
+            de: "Laut",
+            ru: "Громкий",
+            uk: "Гучний",
+            es: "Ruidoso",
+            pt: "Barulhento",
+            it: "Rumoroso",
+            lb: "Haart"
+        }
+    },
+    {
+        translations: {
+            en: "Quiet",
+            fr: "Calme",
+            de: "Leise",
+            ru: "Тихий",
+            uk: "Тихий",
+            es: "Silencioso",
+            pt: "Silencioso",
+            it: "Silenzioso",
+            lb: "Lues"
+        }
+    },
+    {
+        translations: {
+            en: "Bright",
+            fr: "Lumineux",
+            de: "Hell",
+            ru: "Светлый",
+            uk: "Світлий",
+            es: "Brillante",
+            pt: "Brilhante",
+            it: "Luminoso",
+            lb: "Hell"
+        }
+    },
+    {
+        translations: {
+            en: "Dark",
+            fr: "Sombre",
+            de: "Dunkel",
+            ru: "Тёмный",
+            uk: "Темний",
+            es: "Oscuro",
+            pt: "Escuro",
+            it: "Scuro",
+            lb: "Donkel"
+        }
+    },
+    {
+        translations: {
+            en: "Light",
+            fr: "Léger",
+            de: "Leicht",
+            ru: "Лёгкий",
+            uk: "Легкий",
+            es: "Ligero",
+            pt: "Leve",
+            it: "Leggero",
+            lb: "Liicht"
+        }
+    },
+    {
+        translations: {
+            en: "Difficult",
+            fr: "Difficile",
+            de: "Schwierig",
+            ru: "Трудный",
+            uk: "Складний",
+            es: "Difícil",
+            pt: "Difícil",
+            it: "Difficile",
+            lb: "Komplizéiert"
+        }
+    },
+    {
+        translations: {
+            en: "New",
+            fr: "Nouveau",
+            de: "Neu",
+            ru: "Новый",
+            uk: "Новий",
+            es: "Nuevo",
+            pt: "Novo",
+            it: "Nuovo",
+            lb: "Nei"
+        }
+    },
+    {
+        translations: {
+            en: "Old",
+            fr: "Vieux",
+            de: "Alt",
+            ru: "Старый",
+            uk: "Старий",
+            es: "Viejo",
+            pt: "Velho",
+            it: "Vecchio",
+            lb: "Al"
+        }
+    },
+    {
+        translations: {
+            en: "Heavy",
+            fr: "Lourd",
+            de: "Schwer",
+            ru: "Тяжёлый",
+            uk: "Важкий",
+            es: "Pesado",
+            pt: "Pesado",
+            it: "Pesante",
+            lb: "Schwéier"
+        }
+    },
+    {
+        translations: {
+            en: "Fast",
+            fr: "Rapide",
+            de: "Schnell",
+            ru: "Быстрый",
+            uk: "Швидкий",
+            es: "Rápido",
+            pt: "Rápido",
+            it: "Veloce",
+            lb: "Séier"
+        }
+    },
+    {
+        translations: {
+            en: "Slow",
+            fr: "Lent",
+            de: "Langsam",
+            ru: "Медленный",
+            uk: "Повільний",
+            es: "Lento",
+            pt: "Lento",
+            it: "Lento",
+            lb: "Lues"
+        }
+    },
+    {
+        translations: {
+            en: "Full",
+            fr: "Plein",
+            de: "Voll",
+            ru: "Полный",
+            uk: "Повний",
+            es: "Lleno",
+            pt: "Cheio",
+            it: "Pieno",
+            lb: "Voll"
+        }
+    },
+    {
+        translations: {
+            en: "Empty",
+            fr: "Vide",
+            de: "Leer",
+            ru: "Пустой",
+            uk: "Порожній",
+            es: "Vacío",
+            pt: "Vazio",
+            it: "Vuoto",
+            lb: "Eidel"
+        }
+    },
+    {
+        translations: {
+            en: "Long",
+            fr: "Long",
+            de: "Lang",
+            ru: "Длинный",
+            uk: "Довгий",
+            es: "Largo",
+            pt: "Longo",
+            it: "Lungo",
+            lb: "Laang"
+        }
+    },
+    {
+        translations: {
+            en: "Short",
+            fr: "Court",
+            de: "Kurz",
+            ru: "Короткий",
+            uk: "Короткий",
+            es: "Corto",
+            pt: "Curto",
+            it: "Corto",
+            lb: "Kuerz"
+        }
+    },
+    {
+        translations: {
+            en: "Tall",
+            fr: "Grand",
+            de: "Hoch",
+            ru: "Высокий",
+            uk: "Високий",
+            es: "Alto",
+            pt: "Alto",
+            it: "Alto",
+            lb: "Héisch"
+        }
+    },
+    {
+        translations: {
+            en: "Low",
+            fr: "Bas",
+            de: "Niedrig",
+            ru: "Низкий",
+            uk: "Низький",
+            es: "Bajo",
+            pt: "Baixo",
+            it: "Basso",
+            lb: "Niddereg"
+        }
+    }
 ];
 
-let currentIndex = 0; // Tracks the current card
-let showingTranslation = false; // Tracks which side is being shown
+// Current state
+let currentIndex = 0; // Current flashcard index
+let currentLanguage = 'en'; // Default translation language
+let showingTranslation = false; // Flip state (false shows Luxembourgish)
 
 // DOM elements
-const content = document.getElementById('content');
+const cardContent = document.getElementById('content');
 const flipButton = document.getElementById('flip');
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
+const progress = document.getElementById('progress');
+const languageToggle = document.getElementById('language-toggle');
+const languageOptions = document.getElementById('language-options');
+const languageMenu = document.getElementById('language-menu');
 
 // Update card content
 function updateCard() {
     const card = flashcards[currentIndex];
-    content.textContent = showingTranslation ? card.translation : card.word;
+    const text = showingTranslation
+        ? card.translations[currentLanguage] // Show selected language translation
+        : card.translations.lb; // Show Luxembourgish by default
+    cardContent.textContent = text;
 
-    // Disable previous button on the first card
+    // Update progress indicator
+    progress.textContent = `Card ${currentIndex + 1} / ${flashcards.length}`;
+
+    // Enable or disable navigation buttons
     prevButton.disabled = currentIndex === 0;
-
-    // Disable next button on the last card
     nextButton.disabled = currentIndex === flashcards.length - 1;
 }
 
-// Event listeners
+// Flip the card
 flipButton.addEventListener('click', () => {
-    showingTranslation = !showingTranslation; // Flip the card
+    showingTranslation = !showingTranslation; // Toggle translation side
     updateCard();
 });
 
+// Navigate to the next card
 nextButton.addEventListener('click', () => {
     if (currentIndex < flashcards.length - 1) {
-        currentIndex++; // Move to the next card
-        showingTranslation = false; // Reset to word side
+        currentIndex++;
+        showingTranslation = false; // Reset to Luxembourgish side
         updateCard();
     }
 });
 
+// Navigate to the previous card
 prevButton.addEventListener('click', () => {
     if (currentIndex > 0) {
-        currentIndex--; // Move to the previous card
-        showingTranslation = false; // Reset to word side
+        currentIndex--;
+        showingTranslation = false; // Reset to Luxembourgish side
         updateCard();
     }
 });
+
+// Toggle dropdown visibility
+languageToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent dropdown from closing on click
+    languageMenu.classList.toggle('active');
+});
+
+// Change language and update card content
+languageOptions.addEventListener('click', (event) => {
+    const selectedLang = event.target.dataset.lang;
+    if (selectedLang) {
+        currentLanguage = selectedLang; // Set the new translation language
+
+        // Update the language toggle button text
+        languageToggle.querySelector('span').textContent = `🌐 ${event.target.textContent}`;
+
+        // Refresh the current card content
+        updateCard();
+
+        // Hide the dropdown menu
+        languageMenu.classList.remove('active');
+    }
+});
+
+// Hide dropdown when clicking outside
+document.addEventListener('click', () => {
+    languageMenu.classList.remove('active');
+});
+
+
 
 // Initialize the first card
 updateCard();
+
+
+
